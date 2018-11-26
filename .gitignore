@@ -1,0 +1,7 @@
+.DS_Store
+/vendor/
+.idea/
+/log/
+/public/var/report/
+/public/media/
+/.web-server-pid

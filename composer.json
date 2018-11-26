@@ -1,0 +1,114 @@
+{
+    "name": "agencearcange/magento-composer",
+    "description": "Magento stack via Composer",
+    "authors": [
+        {
+            "name": "Thomas Ferney",
+            "email": "thomas.ferney@agencearcange.fr"
+        }
+    ],
+    "repositories": [],
+    "config": {
+       "platform": {
+           "php": "7.2"
+       }
+   },
+    "extra":{
+        "magento-root-dir": "public",
+        "magento-core-deploy" : {
+            "excludes": [
+                ".htaccess",
+                "index.php",
+                "app/etc/local.xml"
+            ],
+            "ignore-directories": [
+                "/app/code/core/Mage",
+                "/app/code/core/Zend",
+                "/app/code/core/Enterprise",
+                "/dev",
+                "/lib/Zend",
+                "/lib/Varien",
+                "/lib/Magento",
+                "/lib/PEAR",
+                "/lib/Mage",
+                "/lib/phpseclib",
+                "/lib/flex",
+                "/lib/LinLibertineFont",
+                "/downloader",
+                "/js/extjs",
+                "/js/prototype",
+                "/js/calendar",
+                "/js/mage",
+                "/js/varien",
+                "/lib/Apache",
+                "/app/code/community/Phoenix/Moneybookers",
+                "/app/design/adminhtml/default/default/template/bundle",
+                "/app/design/adminhtml/default/default/template/catalog",
+                "/app/design/adminhtml/default/default/template/customer",
+                "/app/design/adminhtml/default/default/template/downloadable",
+                "/app/design/adminhtml/default/default/template/newsletter",
+                "/app/design/adminhtml/default/default/template/payment",
+                "/app/design/adminhtml/default/default/template/sales",
+                "/app/design/adminhtml/default/default/template/system",
+                "/app/design/adminhtml/default/default/template/widget",
+                "/app/design/adminhtml/default/default/template/xmlconnect",
+                "/app/design/frontend/base/default/template/bundle",
+                "/app/design/frontend/base/default/template/catalog",
+                "/app/design/frontend/base/default/template/checkout",
+                "/app/design/frontend/base/default/template/customer",
+                "/app/design/frontend/base/default/template/downloadable",
+                "/app/design/frontend/base/default/template/page",
+                "/app/design/frontend/base/default/template/payment",
+                "/app/design/frontend/base/default/template/paypal",
+                "/app/design/frontend/base/default/template/reports",
+                "/app/design/frontend/base/default/template/sales",
+                "/app/design/frontend/base/default/template/wishlist",
+                "/app/design/frontend/default/iphone/template/catalog",
+                "/app/design/frontend/default/iphone/template/checkout",
+                "/app/design/frontend/default/iphone/template/page",
+                "/app/design/frontend/default/iphone/template/sales",
+                "/app/design/frontend/default/iphone/template/wishlist",
+                "/app/design/frontend/base/default/template/cataloginventory",
+                "/app/design/frontend/base/default/template/catalogsearch",
+                "/app/design/frontend/base/default/template/pagecache",
+                "/app/design/frontend/default/iphone/template/catalogsearch",
+                "/app/design/install/default/default/template/install",
+                "/skin/adminhtml/default/default/images/xmlconnect",
+                "/skin/frontend/base/default/images/moneybookers",
+                "/app/design/adminhtml/default/default/template/paypal",
+                "/app/design/adminhtml/default/default/template/permissions",
+                "/app/design/adminhtml/default/default/template/report",
+                "/app/design/adminhtml/default/default/template/tax",
+                "/app/design/frontend/base/default/template/cms",
+                "/app/design/frontend/base/default/template/email",
+                "/app/design/frontend/base/default/template/moneybookers",
+                "/app/design/frontend/base/default/template/oauth",
+                "/app/design/frontend/base/default/template/review",
+                "/app/design/frontend/default/modern/template/catalog",
+                "/skin/adminhtml/default/default/xmlconnect",
+                "/skin/frontend/base/default/images/cookies",
+                "/skin/frontend/base/default/images/xmlconnect",
+                "/app/design/frontend/default/modern/template/catalogsearch",
+                "/var/session",
+                "/var/log",
+                "/var/cache"
+            ],
+            "git-ignore-append": false
+        },
+        "patches": {
+            "firegento/magento": {
+                "php7.2 support": "https://raw.githubusercontent.com/brentwpeterson/magento-patches/master/CE1.9/PATCH-1.9.3.1-1.9.3.9_PHP7-2018-09-13-08-01-43.2_v2"
+            }
+        }
+    },
+    "require": {
+        "aydin-hassan/magento-core-composer-installer": "^1.5",
+        "magento-hackathon/magento-composer-installer": "^3.1",
+        "firegento/magento": "~1.9.3.10",
+        "cweagans/composer-patches": "^1.6"
+    },
+    "require-dev": {
+        "symfony/web-server-bundle": "^3.3",
+        "symfony/console": "^3.3"
+    }
+}
